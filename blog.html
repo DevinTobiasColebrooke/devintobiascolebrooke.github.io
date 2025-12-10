@@ -2,15 +2,44 @@
 layout: default
 title: Updates
 ---
+<header class="page-header">
+    <div class="page-header-content">
+        <h1>Grantor Updates</h1>
+        <p class="page-subtitle">Latest news and milestones</p>
+    </div>
+</header>
+
 <div class="blog-container">
-    <h1>Grantor Updates</h1>
-    <ul class="post-list">
+    {% if site.posts.size > 0 %}
+    <div class="post-grid">
         {% for post in site.posts %}
-        <li>
-            <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
-            <p>{{ post.excerpt }}</p>
-        </li>
+        <article class="post-card fade-in">
+            <div class="post-card-header">
+                <time class="post-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+                    <span class="post-date-day">{{ post.date | date: "%d" }}</span>
+                    <span class="post-date-month">{{ post.date | date: "%b %Y" }}</span>
+                </time>
+            </div>
+            <div class="post-card-body">
+                <h2 class="post-title">
+                    <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+                </h2>
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            </div>
+            <div class="post-card-footer">
+                <a href="{{ post.url }}" class="read-more">
+                    Read more
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
         {% endfor %}
-    </ul>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <p>No updates yet. Check back soon!</p>
+    </div>
+    {% endif %}
 </div>

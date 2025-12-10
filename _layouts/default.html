@@ -5,20 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <a href="/">Timeline</a>
-        <a href="/blog">Grantor Updates (Blog)</a>
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">{{ site.title }}</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">Timeline</a>
+                <a href="/blog" class="nav-link {% if page.url == '/blog.html' %}active{% endif %}">Updates</a>
+            </div>
+        </div>
     </nav>
 
     <main>
         {{ content }}
     </main>
 
-    <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+            <p class="footer-tagline">{{ site.description }}</p>
+        </div>
     </footer>
+
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
 
     <script src="/assets/js/script.js"></script>
 </body>

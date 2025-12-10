@@ -2,9 +2,21 @@
 layout: default
 ---
 <article class="blog-post">
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%B %d, %Y" }}</p>
-    <div class="content">
+    <header class="post-header">
+        <time class="post-meta-date" datetime="{{ page.date | date: '%Y-%m-%d' }}">
+            {{ page.date | date: "%B %d, %Y" }}
+        </time>
+        <h1 class="post-main-title">{{ page.title }}</h1>
+    </header>
+    <div class="post-content">
         {{ content }}
     </div>
+    <footer class="post-footer">
+        <a href="/blog" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to all updates
+        </a>
+    </footer>
 </article>

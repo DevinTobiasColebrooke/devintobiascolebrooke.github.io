@@ -4,21 +4,34 @@ title: Home
 ---
 
 <header class="hero">
-    <h1>My Journey</h1>
-    <p>Education & Career Timeline</p>
+    <div class="hero-content">
+        <h1 class="hero-title">My Journey</h1>
+        <p class="hero-subtitle">Education & Career Timeline</p>
+        <div class="hero-ornament"></div>
+    </div>
+    <div class="hero-scroll-indicator">
+        <span>Scroll to explore</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M19 12l-7 7-7-7"/>
+        </svg>
+    </div>
 </header>
 
-<div class="timeline">
-    {% for item in site.data.timeline %}
-    <div class="timeline-item fade-in">
-        <div class="timeline-content">
-            <span class="date">{{ item.date }}</span>
-            <h2>{{ item.title }}</h2>
-            {% if item.image %}
-            <img src="{{ item.image }}" alt="{{ item.title }}">
-            {% endif %}
-            <p>{{ item.description }}</p>
+<section class="timeline-section">
+    <div class="timeline">
+        {% for item in site.data.timeline %}
+        <div class="timeline-item fade-in" data-index="{{ forloop.index }}">
+            <div class="timeline-content">
+                <span class="date">{{ item.date }}</span>
+                <h2 class="timeline-title">{{ item.title }}</h2>
+                {% if item.image %}
+                <div class="timeline-image">
+                    <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
+                </div>
+                {% endif %}
+                <p class="timeline-description">{{ item.description }}</p>
+            </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
+</section>
