@@ -1,38 +1,7 @@
-- title: "Associates Degree Completion"
-  date: "December 11, 2025"
-  description: "Completed Associate of Arts in General Studies at University of Massachusetts Global. Grade: 3.5."
-
-- title: "Bachelor Program Acceptance"
-  date: "October 17, 2025"
-  description: "Accepted into the Bachelor of Business Leadership program at University of Massachusetts Global."
-
-- title: "Disney Legacy Award"
-  date: "September 3, 2025"
-  description: "Received the prestigious Disney Legacy Award."
-
-- title: "Claims Clerk - Canon Solutions America"
-  date: "November 2022 - August 2024"
-  description: "Part-time position in Portland, Oregon. Focused on Organization Skills."
-
-- title: "Fisher House Foundation - Volunteer"
-  date: "June 2023 - Present"
-  description: "Volunteering to provide veteran support."
-
-- title: "Leadership Team - Disney Store"
-  date: "April 2022 - Present"
-  description: "Full-time position in Portland, Oregon. Focused on Organization Skills and Communication."
-
-- title: "Marine Toys for Tots Foundation - Fundraiser"
-  date: "January 2022 - Present"
-  description: "Helping organize Toys for Tots donations for the store annually."
-
-- title: "Manager - Banana Republic"
-  date: "April 2021 - January 2022"
-  description: "Full-time position. Focused on Organization Skills and Communication."
-
-- title: "Assistant Manager - Cafe Zupas"
-  date: "August 2020 - May 2021"
-  description: "Full-time position in Boise, Idaho. Focused on Communication and Leadership."
+- title: "Evergreen (Volleyball Season)"
+  date: "July 2018 - September 2018"
+  image: "https://via.placeholder.com/150" # Replace with your image URL
+  description: "Played volleyball for Evergreen."
 
 - title: "Leadership Team - Disney Store"
   date: "September 2018 - August 2020"
@@ -42,6 +11,38 @@
   date: "October 2018"
   description: "Attended Mt Hood Community College."
 
-- title: "Evergreen (Volleyball Season)"
-  date: "July 2018 - September 2018"
-  description: "Played volleyball for Evergreen."
+- title: "Assistant Manager - Cafe Zupas"
+  date: "August 2020 - May 2021"
+  description: "Full-time position in Boise, Idaho. Focused on Communication and Leadership."
+
+- title: "Manager - Banana Republic"
+  date: "April 2021 - January 2022"
+  description: "Full-time position. Focused on Organization Skills and Communication."
+
+- title: "Marine Toys for Tots Foundation - Fundraiser"
+  date: "January 2022 - Present"
+  description: "Helping organize Toys for Tots donations for the store annually."
+
+- title: "Leadership Team - Disney Store"
+  date: "April 2022 - Present"
+  description: "Full-time position in Portland, Oregon. Focused on Organization Skills and Communication."
+
+- title: "Claims Clerk - Canon Solutions America"
+  date: "November 2022 - August 2024"
+  description: "Part-time position in Portland, Oregon. Focused on Organization Skills."
+
+- title: "Fisher House Foundation - Volunteer"
+  date: "June 2023 - Present"
+  description: "Volunteering to provide veteran support."
+
+- title: "Disney Legacy Award"
+  date: "September 3, 2025"
+  description: "Received the prestigious Disney Legacy Award."
+
+- title: "Bachelor Program Acceptance"
+  date: "October 17, 2025"
+  description: "Accepted into the Bachelor of Business Leadership program at University of Massachusetts Global."
+
+- title: "Associates Degree Completion"
+  date: "December 11, 2025"
+  description: "Completed Associate of Arts in General Studies at University of Massachusetts Global. Grade: 3.5."
