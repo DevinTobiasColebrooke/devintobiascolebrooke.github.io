@@ -239,7 +239,7 @@ img {
     padding: 2rem 0;
 }
 
-/* Remove the solid line - we'll use dots instead */
+/* Remove the solid line */
 .timeline::after {
     content: none;
 }
@@ -267,46 +267,9 @@ img {
     padding-left: 4rem;
 }
 
-/* Dotted line connecting items - positioned before each item */
+/* REMOVED: Dotted line connecting items */
 .timeline-item::before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: calc(100% + 1.5rem);
-    right: -4px;
-    top: -1.5rem;
-    background-image: repeating-linear-gradient(
-        to bottom,
-        var(--color-accent) 0px,
-        var(--color-accent) 8px,
-        transparent 8px,
-        transparent 16px
-    );
-    background-size: 8px 16px;
-    z-index: 1;
-}
-
-.timeline-item:nth-child(even)::before {
-    left: -4px;
-    right: auto;
-}
-
-/* Hide the dotted line before the first item */
-.timeline-item:first-child::before {
-    background-image: repeating-linear-gradient(
-        to bottom,
-        transparent 0px,
-        transparent 50%,
-        var(--color-accent) 50%,
-        var(--color-accent) calc(50% + 8px),
-        transparent calc(50% + 8px),
-        transparent calc(50% + 16px)
-    );
-}
-
-/* Hide the dotted line after the last item */
-.timeline-item:last-child::before {
-    height: 50%;
+    content: none;
 }
 
 /* The Main Dot/Circle on the timeline */
