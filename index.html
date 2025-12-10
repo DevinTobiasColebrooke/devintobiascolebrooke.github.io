@@ -1,0 +1,24 @@
+---
+layout: default
+title: Home
+---
+
+<header class="hero">
+    <h1>My Journey</h1>
+    <p>Education & Career Timeline</p>
+</header>
+
+<div class="timeline">
+    {% for item in site.data.timeline %}
+    <div class="timeline-item fade-in">
+        <div class="timeline-content">
+            <span class="date">{{ item.date }}</span>
+            <h2>{{ item.title }}</h2>
+            {% if item.image %}
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+            {% endif %}
+            <p>{{ item.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>

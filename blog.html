@@ -1,0 +1,16 @@
+---
+layout: default
+title: Updates
+---
+<div class="blog-container">
+    <h1>Grantor Updates</h1>
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+            <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+            <p>{{ post.excerpt }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
