@@ -239,18 +239,9 @@ img {
     padding: 2rem 0;
 }
 
-/* The Vertical Line */
+/* Remove the solid line - we'll use dots instead */
 .timeline::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background: linear-gradient(to bottom, var(--color-accent), var(--color-secondary));
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -2px;
-    border-radius: 2px;
-    box-shadow: 0 0 20px rgba(244, 88, 102, 0.3);
+    content: none;
 }
 
 /* Timeline Items */
@@ -276,7 +267,49 @@ img {
     padding-left: 4rem;
 }
 
-/* The Dot on the Line */
+/* Dotted line connecting items - positioned before each item */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: calc(100% + 1.5rem);
+    right: -4px;
+    top: -1.5rem;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        var(--color-accent) 0px,
+        var(--color-accent) 8px,
+        transparent 8px,
+        transparent 16px
+    );
+    background-size: 8px 16px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -4px;
+    right: auto;
+}
+
+/* Hide the dotted line before the first item */
+.timeline-item:first-child::before {
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 50%,
+        var(--color-accent) 50%,
+        var(--color-accent) calc(50% + 8px),
+        transparent calc(50% + 8px),
+        transparent calc(50% + 16px)
+    );
+}
+
+/* Hide the dotted line after the last item */
+.timeline-item:last-child::before {
+    height: 50%;
+}
+
+/* The Main Dot/Circle on the timeline */
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -689,8 +722,10 @@ img {
         padding: 6rem 1.5rem 4rem;
     }
     
-    .timeline::after {
-        left: 30px;
+    /* Mobile timeline - dots on left side */
+    .timeline-item::before {
+        left: 18px;
+        right: auto;
     }
     
     .timeline-item {
@@ -705,6 +740,12 @@ img {
         left: 0;
         padding-left: 70px;
         padding-right: 1.5rem;
+    }
+    
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before {
+        left: 18px;
+        right: auto;
     }
     
     .timeline-item::after,
@@ -756,6 +797,17 @@ img {
     .timeline-item:nth-child(even) {
         padding-left: 60px;
         padding-right: 1rem;
+    }
+    
+    .timeline-item::before,
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before {
+        left: 14px;
+    }
+    
+    .timeline-item::after,
+    .timeline-item:nth-child(even)::after {
+        left: 14px;
     }
     
     .blog-container {
