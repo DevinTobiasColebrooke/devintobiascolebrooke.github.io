@@ -2,15 +2,16 @@
    CSS VARIABLES & RESET
    ================================ */
 :root {
-    --color-primary: #631a86;
-    --color-primary-light: #c45ab3;
-    --color-secondary: #f45866;
-    --color-accent: #a2666f;
-    --color-accent-light: #f49390;
+    --color-primary: #1B211A;
+    --color-primary-light: #628141;
+    --color-secondary: #8BAE66;
+    --color-accent: #628141;
+    --color-accent-light: #8BAE66;
     --color-bg: #fdf8f9;
     --color-white: #ffffff;
     --color-text: #333333;
     --color-text-light: #666666;
+    --color-cream: #EBD5AB;
     
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', 'Helvetica Neue', sans-serif;
@@ -18,9 +19,9 @@
     --transition-base: 0.3s ease;
     --transition-smooth: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     
-    --shadow-sm: 0 2px 8px rgba(99, 26, 134, 0.08);
-    --shadow-md: 0 4px 16px rgba(99, 26, 134, 0.12);
-    --shadow-lg: 0 8px 32px rgba(99, 26, 134, 0.16);
+    --shadow-sm: 0 2px 8px rgba(27, 33, 26, 0.08);
+    --shadow-md: 0 4px 16px rgba(27, 33, 26, 0.12);
+    --shadow-lg: 0 8px 32px rgba(27, 33, 26, 0.16);
 }
 
 * {
@@ -128,7 +129,7 @@ img {
 .nav-link:hover,
 .nav-link.active {
     color: var(--color-primary);
-    background: rgba(99, 26, 134, 0.05);
+    background: rgba(27, 33, 26, 0.05);
 }
 
 .nav-link:hover::after,
@@ -143,7 +144,7 @@ img {
     position: relative;
     text-align: center;
     padding: 8rem 2rem 6rem;
-    background: linear-gradient(135deg, #631a86 0%, #a2666f 60%, #f45866 100%);
+    background: linear-gradient(135deg, #1B211A 0%, #628141 60%, #8BAE66 100%);
     color: white;
     overflow: hidden;
 }
@@ -155,8 +156,8 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 50%, rgba(196, 90, 179, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 70% 80%, rgba(244, 88, 102, 0.3) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 50%, rgba(139, 174, 102, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(235, 213, 171, 0.2) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -281,7 +282,7 @@ img {
     top: 2rem;
     border-radius: 50%;
     z-index: 2;
-    box-shadow: 0 0 0 4px rgba(196, 90, 179, 0.2);
+    box-shadow: 0 0 0 4px rgba(98, 129, 65, 0.2);
     transition: all var(--transition-base);
 }
 
@@ -292,7 +293,7 @@ img {
 .timeline-item:hover::after {
     transform: scale(1.3);
     border-color: var(--color-secondary);
-    box-shadow: 0 0 0 6px rgba(244, 88, 102, 0.2);
+    box-shadow: 0 0 0 6px rgba(139, 174, 102, 0.2);
 }
 
 /* Content Card */
@@ -322,7 +323,7 @@ img {
     font-size: 0.95rem;
     margin-bottom: 0.75rem;
     padding: 0.35rem 1rem;
-    background: linear-gradient(135deg, rgba(162, 102, 111, 0.1), rgba(244, 88, 102, 0.1));
+    background: linear-gradient(135deg, rgba(98, 129, 65, 0.1), rgba(139, 174, 102, 0.1));
     border-radius: 20px;
     letter-spacing: 0.5px;
 }
@@ -366,9 +367,9 @@ img {
    ================================ */
 .page-header {
     padding: 6rem 2rem 4rem;
-    background: linear-gradient(135deg, rgba(99, 26, 134, 0.05), rgba(244, 88, 102, 0.05));
+    background: linear-gradient(135deg, rgba(27, 33, 26, 0.05), rgba(139, 174, 102, 0.05));
     text-align: center;
-    border-bottom: 1px solid rgba(99, 26, 134, 0.1);
+    border-bottom: 1px solid rgba(27, 33, 26, 0.1);
 }
 
 .page-header-content h1 {
@@ -426,7 +427,7 @@ img {
     flex-direction: column;
     align-items: center;
     padding: 0.75rem 1rem;
-    background: linear-gradient(135deg, rgba(99, 26, 134, 0.08), rgba(244, 88, 102, 0.08));
+    background: linear-gradient(135deg, rgba(27, 33, 26, 0.08), rgba(139, 174, 102, 0.08));
     border-radius: 12px;
     line-height: 1.2;
 }
@@ -472,7 +473,7 @@ img {
 }
 
 .post-card-footer {
-    border-top: 1px solid rgba(99, 26, 134, 0.1);
+    border-top: 1px solid rgba(27, 33, 26, 0.1);
     padding-top: 1.25rem;
 }
 
@@ -512,7 +513,7 @@ img {
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 2px solid rgba(99, 26, 134, 0.1);
+    border-bottom: 2px solid rgba(27, 33, 26, 0.1);
 }
 
 .post-meta-date {
@@ -522,7 +523,7 @@ img {
     font-weight: 500;
     margin-bottom: 1rem;
     padding: 0.5rem 1.25rem;
-    background: linear-gradient(135deg, rgba(162, 102, 111, 0.1), rgba(244, 88, 102, 0.1));
+    background: linear-gradient(135deg, rgba(98, 129, 65, 0.1), rgba(139, 174, 102, 0.1));
     border-radius: 20px;
 }
 
@@ -559,7 +560,7 @@ img {
 .post-footer {
     margin-top: 4rem;
     padding-top: 2rem;
-    border-top: 2px solid rgba(99, 26, 134, 0.1);
+    border-top: 2px solid rgba(27, 33, 26, 0.1);
 }
 
 .back-link {
@@ -588,7 +589,7 @@ img {
    FOOTER
    ================================ */
 .site-footer {
-    background: linear-gradient(135deg, #631a86 0%, #a2666f 100%);
+    background: linear-gradient(135deg, #1B211A 0%, #628141 100%);
     color: white;
     padding: 3rem 2rem;
     text-align: center;
