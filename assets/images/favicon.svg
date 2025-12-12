@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Purple Circle Background -->
+  <circle cx="50" cy="50" r="50" fill="#631a86"/>
+  <!-- JLR Text in White -->
+  <text x="50" y="68" font-family="Georgia, serif" font-size="45" fill="#ffffff" text-anchor="middle" font-weight="bold">JLR</text>
+</svg>
